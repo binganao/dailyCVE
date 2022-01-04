@@ -1,6 +1,6 @@
 
 [cron]
-  spec = "1 * * * * ?"
+  spec = "* * 12 * * ?"
 
 [http]
   port = 80
@@ -10,5 +10,5 @@
   database = "daily_cve"
   host = "localhost"
   password = "root"
-  port = "8889"
+  port = "3306"
   username = "root"
