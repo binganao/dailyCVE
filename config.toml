@@ -1,0 +1,9 @@
+
+[cron]
+  spec = "0 30 12 * * ?"
+
+[http]
+  port = 80
+
+[redis]
+  port = 6379
