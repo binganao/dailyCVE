@@ -1,9 +1,14 @@
 
 [cron]
-  spec = "0 30 12 * * ?"
+  spec = "1 * * * * ?"
 
 [http]
   port = 80
 
-[redis]
-  port = 6379
+[mysql]
+  charset = "utf8mb4"
+  database = "daily_cve"
+  host = "localhost"
+  password = "root"
+  port = "8889"
+  username = "root"
