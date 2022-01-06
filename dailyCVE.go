@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/binganao/dailyCVE/lib"
+	"github.com/binganao/dailyCVE/middleware"
 	"github.com/binganao/dailyCVE/model"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
@@ -19,6 +20,7 @@ func main() {
 	c.Start()
 	defer c.Stop()
 	r := gin.Default()
+	r.Use(middleware.Cors())
 	r.GET("/api/cve/list", func(ctx *gin.Context) {
 		date := ctx.Query("date")
 		ctx.JSON(http.StatusOK, model.Resp{Code: http.StatusOK, CVEs: lib.QueryCVE(date)})
